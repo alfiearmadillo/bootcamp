@@ -23,6 +23,36 @@ class Bag{
     }
 }
 
+class Traveller{
+    name;
+    passportNumber;
+    bags;
+
+    constructor(bags){
+        let tempname = "";
+        for(let i=0;i<Math.floor(Math.random() * 11)+3;i++){
+            tempname = tempname + String.fromCharCode(Math.floor(Math.random() * 26)+97)
+        }
+        this.name=tempname;
+        this.passportNumber=Math.floor(Math.random() * 10000000);
+        
+        this.bags=bags;
+    }
+    addBag(newBag){
+        this.bags.push(newBag)
+    }
+
+    removeBag(bagLookingFor){
+        const bagIsID=(element)=>element.bagID===(bagLookingFor);
+        const bagIndex = this.bags.findIndex(bagIsID);
+        if(bagIndex > -1){
+        this.bags.splice(bagIndex,1);
+        }
+    }
+}
+
+
+
 class Passenger extends Traveller{
     seatNumber;
 
@@ -74,33 +104,6 @@ class Plane{
     }
 }
 
-class Traveller{
-    name;
-    passportNumber;
-    bags;
-
-    constructor(bags){
-        let tempname = "";
-        for(let i=0;i<Math.floor(Math.random() * 11)+3;i++){
-            tempname = tempname + String.fromCharCode(Math.floor(Math.random() * 26)+97)
-        }
-        this.name=tempname;
-        this.passportNumber=Math.floor(Math.random() * 10000000);
-        
-        this.bags=bags;
-    }
-    addBag(newBag){
-        this.bags.push(newBag)
-    }
-
-    removeBag(bagLookingFor){
-        const bagIsID=(element)=>element.bagID===(bagLookingFor);
-        const bagIndex = this.bags.findIndex(bagIsID);
-        if(bagIndex > -1){
-        this.bags.splice(bagIndex,1);
-        }
-    }
-}
 
 class CrewMember extends Traveller{
     staffRole;
