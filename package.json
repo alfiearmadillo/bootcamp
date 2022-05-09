@@ -166,6 +166,7 @@
     "source-map": "^0.5.7",
     "source-map-support": "^0.5.13",
     "sprintf-js": "^1.0.3",
+    "sqlite3": "^5.0.8",
     "stack-utils": "^2.0.5",
     "string-length": "^4.0.2",
     "string-width": "^4.2.3",
@@ -197,9 +198,8 @@
   },
   "scripts": {
     "test": "jest",
-    "test:report": "jest --coverage=true" 
+    "test:report": "jest --coverage=true"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alfiearmadillo/bootcamp.git"
