@@ -1,6 +1,7 @@
 const sqlite3 = require("sqlite3");
 const readline = require("readline");
 const { table } = require("console");
+const { totalmem } = require("os");
 
 const db = new sqlite3.Database(
 	"./database.db",
@@ -9,7 +10,7 @@ const db = new sqlite3.Database(
 		if (err) {
 			return console.error(err.message);
 		} else {
-			//console.log("\nSuccess!\n");
+			console.log("\nSuccess!\n");
 		}
 	}
 );
@@ -290,7 +291,26 @@ class DatabaseMaker {
 }
 
 let testrun = new DatabaseMaker;
-testrun.UI();
+// testrun.UI();
+
+// db.all("ALTER TABLE MenuItem ADD menu_id FOREIGN KEY")
+// db.all("ALTER TABLE Menu ADD restaurant_id FOREIGN KEY")
+
+let test22
+//test22 = "SELECT Restaurant.name, menu.title FROM Restaurant JOIN menu ON Restaurant.id = Menu.restaurant_id WHERE Restaurant.id = 1"
+//test22 = "SELECT COUNT(Menu.title), Restaurant.name FROM Menu JOIN Restaurant ON Restaurant.id = Menu.RESTAURANT_ID GROUP BY Restaurant.name"
+//test22="SELECT MenuItem.menu_ID, SUM(price) AS 'TotalPrice' FROM Menuitem GROUP BY MenuItem.menu_ID ORDER BY TotalPrice DESC"//GROUP BY price"//GROUP BY Menuitem.price"//all the menus with total cost summed, and in descending order
+// db.all(test22, (err, rows) => {
+//     if (err) {
+//         return console.error(err.message);
+//     } else {
+//         rows.forEach((row) => {
+//             console.log(row);
+//         });
+//     }
+// });
+
+//ID INTEGER PRIMARY KEY AUTOINCREMENT
 
 // Enter name of new table: tests
 // Enter table parameter: test2
