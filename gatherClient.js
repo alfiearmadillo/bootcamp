@@ -1,7 +1,5 @@
-
-(function() {
+javascript: (function() {
     'use strict';
-
     document.addEventListener("keypress", function(i) {
         if (i.which == 105) {
             game.teleport(game.getMyPlayer().map, game.getMyPlayer().x, game.getMyPlayer().y-1);
@@ -23,7 +21,6 @@
             let tpTarget = "";
             let peopleArray = [];
             Object.values(game.players).forEach(val => peopleArray.push(val));
-
             for(let i=0;i<peopleArray.length;i++){
                 peopleString+=''+peopleArray[i].name+'|';
             }
@@ -33,9 +30,6 @@
             game.teleport(peopleArray[targetIndex].map, peopleArray[targetIndex].x, peopleArray[targetIndex].y);
             peopleArray=[];
             targetIndex = null;
-            
-
-
         }
     })
 })();
