@@ -1,4 +1,4 @@
-const { sequelize, DataTypes, Model } = require("../db");
+const { sequelize, DataTypes, Model } = require("./dbkieran");
 
 class Menus extends Model {}
 
@@ -17,4 +17,6 @@ Menus.init(
 }
 );
 
-module.exports = Restaurant;
+Menus.hasMany(Items, {as: "items", foreignKey: "menus_id"});
+
+module.exports = Menus;
