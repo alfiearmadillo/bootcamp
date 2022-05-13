@@ -1,6 +1,6 @@
 const { beforeAll, describe, test, expect } = require("@jest/globals");
-const { sequelize } = require("../db");
-const Restaurant = require("../models/Restaurant");
+const { sequelize } = require("./dbkieran");
+const Restaurant = require(".dbkieranrestaurant");
 
 describe("Restaurant", () => {
   beforeAll(async () => {
