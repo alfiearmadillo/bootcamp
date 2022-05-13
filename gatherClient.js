@@ -1,25 +1,3 @@
-// ==UserScript==
-// @name         Ulfyntown
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  Client for gather.town
-// @author       Ulfyn ft. Richard
-// @match        https://app.gather.town/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=stackoverflow.com
-// @grant        none
-// ==/UserScript==
-
-//For use with Tampermonkey
-
-//  I
-// JKL
-//movement keys for teleport based movement (noclip)
-
-//  T
-//open teleport menu, select user to teleport to them
-
-// P
-//spawn go-kart
 
 javascript: (function() {
     'use strict';
