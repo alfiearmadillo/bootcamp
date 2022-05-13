@@ -1,5 +1,5 @@
 
-javascript: (function() {
+(function() {
     'use strict';
 
     document.addEventListener("keypress", function(i) {
