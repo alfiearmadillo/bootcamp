@@ -291,7 +291,7 @@ class DatabaseMaker {
 }
 
 let testrun = new DatabaseMaker;
-// testrun.UI();
+ testrun.UI();
 
 // db.all("ALTER TABLE MenuItem ADD menu_id FOREIGN KEY")
 // db.all("ALTER TABLE Menu ADD restaurant_id FOREIGN KEY")

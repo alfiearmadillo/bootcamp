@@ -158,6 +158,7 @@
     "rimraf": "^3.0.2",
     "safe-buffer": "^5.1.2",
     "semver": "^6.3.0",
+    "sequelize": "^6.19.0",
     "shebang-command": "^2.0.0",
     "shebang-regex": "^3.0.0",
     "signal-exit": "^3.0.7",
@@ -209,5 +210,6 @@
   "bugs": {
     "url": "https://github.com/alfiearmadillo/bootcamp/issues"
   },
-  "homepage": "https://github.com/alfiearmadillo/bootcamp#readme"
+  "homepage": "https://github.com/alfiearmadillo/bootcamp#readme",
+  "keywords": []
 }
